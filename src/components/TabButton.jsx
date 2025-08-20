@@ -5,7 +5,7 @@ export default function TabButton({ children, onClick, isSelected }) {
         onClick={onClick}
         className={`hover:bg-neutral-600 transition rounded-[10px] p-2 ${
           isSelected ? "bg-neutral-500" : "bg-transparent"
-        }`}
+        } cursor-pointer`}
       >
         {children}
       </button>
