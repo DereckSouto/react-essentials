@@ -1,16 +1,16 @@
-import Header from "./templates/Header";
 import { useState } from "react";
 import { EXAMPLES } from "../data";
 import TabButton from "./TabButton";
 import Section from "./Section";
+import Tabs from "./Tabs";
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState("components");
 
   return (
     <>
-      <menu className="mt-2 mb-1 flex">
-        <TabButton
+    <Tabs buttons={<>
+      <TabButton
           className="transition"
           onClick={() => setSelectedTopic("components")}
           isSelected={selectedTopic === "components"}
@@ -38,7 +38,7 @@ export default function Examples() {
         >
           State
         </TabButton>
-      </menu>
+      </>} />
       <Section title="Examples">
         {!selectedTopic && <p>Please select a topic</p>}
         {selectedTopic && (
