@@ -1,9 +1,12 @@
-export default function Tabs({ children, buttons }) {
+export default function Tabs({ children, buttons, buttonsContainer = 'menu' }) {
+
+  const ButtonsContainer = buttonsContainer;
+
   return (
     <>
-      <menu className="flex mt-4">
+      <ButtonsContainer className="flex mt-4">
         {buttons}
-      </menu>
+      </ButtonsContainer>
       {children}
     </>
   );
